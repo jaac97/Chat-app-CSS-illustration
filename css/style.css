@@ -1,42 +1,59 @@
-:root{
+:root {
     /* Gradients */
     --LightMagenta: hsl(293, 100%, 63%);
     --LightViolet: hsl(264, 100%, 61%);
-    
+
     /* Primary */
-    --PaleViolet: hsl(276, 100%, 81%); /*sub-heading at the top of the app UI)*/
-    --ModerateViolet: hsl(276, 55%, 52%); /*(chat on the left)*/
-    --DesaturatedDarkViolet: hsl(271, 15%, 43%); /*(chat on the right)*/
-    --GrayishBlue: hsl(206, 6%, 79%); /*(placeholder text)*/
-    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%); /* (main heading)*/
-    --DarkGrayishViolet : hsl(270, 7%, 64%); /*(paragraph)*/
+    --PaleViolet: hsl(276, 100%, 81%);
+    /*sub-heading at the top of the app UI)*/
+    --ModerateViolet: hsl(276, 55%, 52%);
+    /*(chat on the left)*/
+    --DesaturatedDarkViolet: hsl(271, 15%, 43%);
+    /*(chat on the right)*/
+    --GrayishBlue: hsl(206, 6%, 79%);
+    /*(placeholder text)*/
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+    /* (main heading)*/
+    --DarkGrayishViolet: hsl(270, 7%, 64%);
+    /*(paragraph)*/
     /* Secondary */
     --White: hsl(0, 0%, 100%);
-    --LightGrayishViolet: hsl(270, 20%, 96%); /*(app background)*/
-    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%); /*(submit button background)*/
-    --VeryLightMagenta: hsl(289, 100%, 72%); /*(radio button outline)*/
+    --LightGrayishViolet: hsl(270, 20%, 96%);
+    /*(app background)*/
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+    /*(submit button background)*/
+    --VeryLightMagenta: hsl(289, 100%, 72%);
+    /*(radio button outline)*/
 }
-html{
+
+html {
     box-sizing: border-box;
     font-size: 62.5%;
 }
-body{
+
+body {
     font-size: 1.6rem;
     font-family: 'Rubik', sans-serif;
     background-color: var(--LightGrayishViolet);
 
 }
-img{
+
+img {
     max-width: 100%;
     display: block;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
-*,*::before,*::after{
+
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
+
 .main {
     height: 100vh;
     display: flex;
@@ -46,13 +63,14 @@ img{
     margin: 0 auto;
     gap: 12.5rem;
 }
-.main__left{
+
+.main__left {
     display: flex;
     position: relative;
     flex-basis: 40%;
 }
 
-.main__flag{
+.main__flag {
     height: 70rem;
     width: 42rem;
     border-bottom-left-radius: 24%;
@@ -64,7 +82,8 @@ img{
     z-index: 1;
 }
 
-.phone{
+.phone {
+    user-select: none;
     position: relative;
     z-index: 10;
     height: 50.5rem;
@@ -80,7 +99,8 @@ img{
     display: flex;
     flex-direction: column;
 }
-.phone__heading{
+
+.phone__heading {
     height: 6.5rem;
     color: var(--White);
     background: linear-gradient(to right, var(--LightViolet) 0%, var(--LightMagenta) 100%);
@@ -93,7 +113,8 @@ img{
     justify-content: space-evenly;
     align-items: center;
 }
-.phone__heading::after{
+
+.phone__heading::after {
     content: '';
     height: 1.8rem;
     width: 12.6rem;
@@ -105,6 +126,7 @@ img{
     border-bottom-left-radius: 4rem;
     border-bottom-right-radius: 4rem;
 }
+
 .phone__arrow {
     border: solid white;
     border-width: 0 2px 2px 0;
@@ -113,23 +135,26 @@ img{
     color: var(--White);
     text-align: center;
 }
+
 .phone__arrow--left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
-} 
-.phone__arrow--right{
+}
+
+.phone__arrow--right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
 
 
-.phone__heading-container{
+.phone__heading-container {
     width: 100%;
     padding: 1rem;
     margin-top: 2rem;
     display: flex;
     align-items: center;
 }
+
 .phone__heading-content {
     display: flex;
     margin-left: 0.5rem;
@@ -144,14 +169,17 @@ img{
     border: 1px solid white;
     overflow: hidden;
 }
-.phone__avatar-photo{
+
+.phone__avatar-photo {
     width: 100%;
     display: block;
 }
+
 .phone__info {
     font-size: 1.3rem;
     margin-right: 1rem;
 }
+
 .phone__status {
     font-weight: 400;
     font-size: 1rem;
@@ -159,24 +187,28 @@ img{
 
 }
 
-.phone__menu{
+.phone__menu {
     margin-left: auto;
     margin-right: 1rem;
 }
-.phone__bar{
+
+.phone__bar {
     height: 2px;
     width: 2px;
     margin-bottom: 1px;
     background-color: var(--White);
     display: block;
 }
-.phone__bar:last-of-type{
+
+.phone__bar:last-of-type {
     margin-bottom: 0;
 }
-.phone__body{
+
+.phone__body {
     font-size: .8rem;
 }
-.phone__msg{
+
+.phone__msg {
     background-color: crimson;
     border-radius: .5rem;
     max-width: 12.5rem;
@@ -188,7 +220,8 @@ img{
     gap: .5rem;
     justify-content: space-between;
 }
-.phone__msg:first-of-type{
+
+.phone__msg:first-of-type {
     margin-top: 1rem;
 }
 
@@ -197,34 +230,40 @@ img{
     background-color: var(--PaleViolet);
     color: var(--LightViolet);
 }
-.phone__msg--send{
+
+.phone__msg--send {
     margin-left: auto;
     margin-right: 1rem;
     background-color: var(--White);
     color: var(--DesaturatedDarkViolet);
 }
+
 .phone__msg--bg-pink {
     background: linear-gradient(to right, var(--LightMagenta) 0%, var(--LightViolet) 100%);
     color: var(--White);
 }
+
 .phone__msg--photos {
     background-color: transparent;
 }
-.phone__image{
+
+.phone__image {
     border-radius: .5rem;
     overflow: hidden;
 }
-.phone__circle{
+
+.phone__circle {
     border: 1px solid var(--LightGrayishViolet);
     flex-basis: 1rem;
     border-radius: 50%;
 }
+
 .phone__price {
     font-weight: 900;
 }
 
 .phone__text {
-    margin: 1rem ;
+    margin: 1rem;
 }
 
 .phone__input {
@@ -236,9 +275,11 @@ img{
     justify-content: space-between;
     align-items: center;
 }
+
 .phone__input_text {
     margin-left: 2rem;
 }
+
 .phone__btn {
     background-color: var(--VeryDarkDesaturatedViolet);
     color: var(--White);
@@ -249,25 +290,44 @@ img{
     align-items: center;
     justify-content: center;
     padding-right: 0.4rem;
-  
+
 }
-.main__right{
+
+.main__right {
     flex-basis: 60%;
     height: 100%;
-
     display: flex;
     align-items: center;
+    position: relative;
 }
-.main__content{
+
+.main__content {
     padding: 1rem;
     max-width: 45.5rem;
 }
-.main__heading{
+
+.main__heading {
     font-weight: 500;
 }
+
 .main__text {
     color: var(--DarkGrayishViolet);
 }
-.attribution{
+
+.main__flag-reverse {
+    position: absolute;
+    bottom: 0;
+    right: -30px;
+    height: 70rem;
+    width: 42rem;
+    transform: rotate(180deg);
+    opacity: .1;
+    border-bottom-left-radius: 24%;
+    border-bottom-right-radius: 42%;
+    background: linear-gradient(45deg, var(--LightViolet) 0%, var(--LightMagenta) 100%);
+    z-index: 1;
+
+}
+.attribution {
     text-align: center;
 }
