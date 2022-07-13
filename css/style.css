@@ -44,22 +44,19 @@ img{
     align-items: flex-start;
     max-width: 1440px;
     margin: 0 auto;
+    gap: 12.5rem;
 }
 .main__left{
     display: flex;
     position: relative;
-    flex-basis: 50%;
+    flex-basis: 40%;
 }
-.main__right{
-    flex-basis: 50%;
-    display: flex;
-    
-}
+
 .main__flag{
     height: 70rem;
     width: 42rem;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 24%;
+    border-bottom-right-radius: 42%;
     background: linear-gradient(45deg, var(--LightViolet) 0%, var(--LightMagenta) 100%);
     top: 0;
     position: absolute;
@@ -76,7 +73,7 @@ img{
     padding-bottom: 1rem;
     /* border: 1px solid black; */
     top: 15rem;
-    right: -20rem;
+    right: -26rem;
     background-color: #fff;
     border-radius: 3rem;
     box-shadow: 19px 19px 20px 0px var(--GrayishBlue);
@@ -177,7 +174,6 @@ img{
     margin-bottom: 0;
 }
 .phone__body{
-    background-color: var(--LightGrayishViolet);
     font-size: .8rem;
 }
 .phone__msg{
@@ -229,8 +225,6 @@ img{
 
 .phone__text {
     margin: 1rem ;
-    
-
 }
 
 .phone__input {
@@ -256,4 +250,24 @@ img{
     justify-content: center;
     padding-right: 0.4rem;
   
+}
+.main__right{
+    flex-basis: 60%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+.main__content{
+    padding: 1rem;
+    max-width: 45.5rem;
+}
+.main__heading{
+    font-weight: 500;
+}
+.main__text {
+    color: var(--DarkGrayishViolet);
+}
+.attribution{
+    text-align: center;
 }
