@@ -2,6 +2,7 @@
     /* Gradients */
     --LightMagenta: hsl(293, 100%, 63%);
     --LightViolet: hsl(264, 100%, 61%);
+    
     /* Primary */
     --PaleViolet: hsl(276, 100%, 81%); /*sub-heading at the top of the app UI)*/
     --ModerateViolet: hsl(276, 55%, 52%); /*(chat on the left)*/
@@ -27,6 +28,7 @@ body{
 }
 img{
     max-width: 100%;
+    display: block;
 }
 *{
     margin: 0;
@@ -48,6 +50,11 @@ img{
     position: relative;
     flex-basis: 50%;
 }
+.main__right{
+    flex-basis: 50%;
+    display: flex;
+    
+}
 .main__flag{
     height: 70rem;
     width: 42rem;
@@ -63,8 +70,8 @@ img{
 .phone{
     position: relative;
     z-index: 10;
-    height: 50rem;
-    width: 23.5rem;
+    height: 50.5rem;
+    width: 25rem;
     padding: 1.2rem;
     padding-bottom: 1rem;
     /* border: 1px solid black; */
@@ -73,6 +80,8 @@ img{
     background-color: #fff;
     border-radius: 3rem;
     box-shadow: 19px 19px 20px 0px var(--GrayishBlue);
+    display: flex;
+    flex-direction: column;
 }
 .phone__heading{
     height: 6.5rem;
@@ -104,6 +113,8 @@ img{
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 3px;
+    color: var(--White);
+    text-align: center;
 }
 .phone__arrow--left {
     transform: rotate(135deg);
@@ -146,14 +157,11 @@ img{
 }
 .phone__status {
     font-weight: 400;
-}
-.phone__status {
     font-size: 1rem;
-    color: var(--DarkGrayishViolet);
+    color: var(--PaleViolet);
+
 }
-.phone__body{
-    display: none;
-}
+
 .phone__menu{
     margin-left: auto;
     margin-right: 1rem;
@@ -167,4 +175,85 @@ img{
 }
 .phone__bar:last-of-type{
     margin-bottom: 0;
+}
+.phone__body{
+    background-color: var(--LightGrayishViolet);
+    font-size: .8rem;
+}
+.phone__msg{
+    background-color: crimson;
+    border-radius: .5rem;
+    max-width: 12.5rem;
+    min-width: 2.2rem;
+    padding: 1rem;
+    margin: .5rem 0;
+    color: var(--White);
+    display: flex;
+    gap: .5rem;
+    justify-content: space-between;
+}
+.phone__msg:first-of-type{
+    margin-top: 1rem;
+}
+
+.phone__msg--recive {
+    margin-left: 1rem;
+    background-color: var(--PaleViolet);
+    color: var(--LightViolet);
+}
+.phone__msg--send{
+    margin-left: auto;
+    margin-right: 1rem;
+    background-color: var(--White);
+    color: var(--DesaturatedDarkViolet);
+}
+.phone__msg--bg-pink {
+    background: linear-gradient(to right, var(--LightMagenta) 0%, var(--LightViolet) 100%);
+    color: var(--White);
+}
+.phone__msg--photos {
+    background-color: transparent;
+}
+.phone__image{
+    border-radius: .5rem;
+    overflow: hidden;
+}
+.phone__circle{
+    border: 1px solid var(--LightGrayishViolet);
+    flex-basis: 1rem;
+    border-radius: 50%;
+}
+.phone__price {
+    font-weight: 900;
+}
+
+.phone__text {
+    margin: 1rem ;
+    
+
+}
+
+.phone__input {
+    border-radius: 1rem;
+    background-color: var(--White);
+    color: var(--DarkGrayishViolet);
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.phone__input_text {
+    margin-left: 2rem;
+}
+.phone__btn {
+    background-color: var(--VeryDarkDesaturatedViolet);
+    color: var(--White);
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0.4rem;
+  
 }
