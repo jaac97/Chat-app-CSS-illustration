@@ -1,0 +1,168 @@
+:root{
+    /* Gradients */
+    --LightMagenta: hsl(293, 100%, 63%);
+    --LightViolet: hsl(264, 100%, 61%);
+    /* Primary */
+    --PaleViolet: hsl(276, 100%, 81%); /*sub-heading at the top of the app UI)*/
+    --ModerateViolet: hsl(276, 55%, 52%); /*(chat on the left)*/
+    --DesaturatedDarkViolet: hsl(271, 15%, 43%); /*(chat on the right)*/
+    --GrayishBlue: hsl(206, 6%, 79%); /*(placeholder text)*/
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%); /* (main heading)*/
+    --DarkGrayishViolet : hsl(270, 7%, 64%); /*(paragraph)*/
+    /* Secondary */
+    --White: hsl(0, 0%, 100%);
+    --LightGrayishViolet: hsl(270, 20%, 96%); /*(app background)*/
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%); /*(submit button background)*/
+    --VeryLightMagenta: hsl(289, 100%, 72%); /*(radio button outline)*/
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--LightGrayishViolet);
+
+}
+img{
+    max-width: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.main__left{
+    display: flex;
+    position: relative;
+    flex-basis: 50%;
+}
+.main__flag{
+    height: 70rem;
+    width: 42rem;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: linear-gradient(45deg, var(--LightViolet) 0%, var(--LightMagenta) 100%);
+    top: 0;
+    position: absolute;
+    left: -106px;
+    z-index: 1;
+}
+
+.phone{
+    position: relative;
+    z-index: 10;
+    height: 50rem;
+    width: 23.5rem;
+    padding: 1.2rem;
+    padding-bottom: 1rem;
+    /* border: 1px solid black; */
+    top: 15rem;
+    right: -20rem;
+    background-color: #fff;
+    border-radius: 3rem;
+}
+.phone__heading{
+    height: 6.5rem;
+    color: var(--White);
+    background: linear-gradient(to right, var(--LightViolet) 0%, var(--LightMagenta) 100%);
+    position: relative;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.phone__heading::after{
+    content: '';
+    height: 1.8rem;
+    width: 12.6rem;
+    display: block;
+    margin: 0 auto;
+    background-color: var(--White);
+    position: absolute;
+    top: 0;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+
+}
+.phone__arrow {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.phone__arrow--left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+} 
+.phone__arrow--right{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+
+.phone__heading-container{
+    width: 100%;
+    padding: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+.phone__heading-content {
+    display: flex;
+    margin-left: 0.5rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.phone__avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid white;
+    overflow: hidden;
+}
+.phone__avatar-photo{
+    width: 100%;
+    display: block;
+}
+.phone__info {
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+.phone__status {
+    font-size: 1rem;
+    color: var(--DarkGrayishViolet);
+}
+.phone__body{
+    display: none;
+}
+.phone__menu{
+    margin-left: auto;
+    margin-right: 1rem;
+}
+.phone__bar{
+    height: 2px;
+    width: 2px;
+    margin-bottom: 1px;
+    background-color: var(--White);
+    display: block;
+}
+.phone__bar:last-of-type{
+    margin-bottom: 0;
+
+}
